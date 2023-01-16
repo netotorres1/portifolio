@@ -1,0 +1,133 @@
+@use './../../styles/variables'
+@use './../../styles/mixins'
+
+.photosnap-content
+    width: 100vw
+    display: flex
+    justify-content: center
+    @include mixins.tablet 
+        width: 768px
+    @include mixins.mobile 
+        width: 380px
+
+    .container-content
+        width: 75%
+        height: 1700px
+        display: flex
+        flex-direction: column
+        @include mixins.tablet 
+            width: 90%
+        @include mixins.mobile 
+            height: 2000px
+
+        .container-info
+            @include mixins.tablet
+                display: flex
+                flex-direction: column
+            .title
+                h2
+                    margin-bottom: 20px
+                    font-family: variables.$font-Ibarra
+                    font-size: 40px
+                p
+                    line-height: 30px
+                    margin-bottom: 20px
+                    width: 80%
+
+                span
+                    color: variables.$slighlyDesaturatedCyan
+                button
+                    margin-top: 20px
+                    width: 200px
+                    height: 50px
+                    background-color: variables.$veryLightGray
+                    border: 1px solid black
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    @include mixins.tablet 
+                        margin-left: 200px
+                    @include mixins.mobile 
+                        margin-left: 0px
+                        margin-bottom: 20px
+
+        .images
+            h2
+                margin-bottom: 20px
+                font-family: variables.$font-Ibarra
+                font-size: 30px
+                font-weight: 500
+
+            p
+                    line-height: 30px
+                    margin-bottom: 20px
+            .bgCapa
+                background-image: url('./../../images/portfolio/desktop/Capamyteam.png')
+                height: 400px
+                background-size: cover
+                margin-bottom: 20px
+
+            .bgMobile
+                background-image: url('./../../images/portfolio/mobile/mobilemyteam.png')
+                height: 400px
+                background-size: cover
+
+    .container-info
+        display: flex
+        flex-direction: row
+    
+    .container-previus-next
+        width: 100%
+        height: 250px
+        align-items: center
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include mixins.mobile 
+            height: 400px
+            border: 2px solid variables.$lighGrey
+
+        .previous
+            @include mixins.mobile
+                height: 100%
+                border: 2px solid variables.$lighGrey
+                display: flex
+                align-items: center
+                flex-direction: column
+
+            h2
+                font-size: 20px
+            button
+                padding: 15px
+                background: transparent
+                border: none
+                font-size: 15px
+
+                &:hover
+                    cursor: pointer
+            img
+                padding-right: 20px
+        
+        .next
+            @include mixins.mobile
+                @include mixins.mobile
+                height: 100%
+                border: 2px solid variables.$lighGrey
+                display: flex
+                align-items: center
+                flex-direction: column
+            h2
+                font-size: 40px
+                font-family: variables.$font-Ibarra
+            button
+                padding: 15px
+                background: transparent
+                border: none
+                font-size: 15px
+                &:hover
+                    cursor: pointer
+
+            img
+                padding-left: 20px
+                    
+
+

@@ -1,0 +1,107 @@
+@use './../../styles/variables'
+@use './../../styles/mixins'
+
+.container-portifolio
+    width: 100vw
+    display: flex
+    justify-content: center
+    @include mixins.tablet 
+        width: 768px
+    @include mixins.mobile 
+        width: 380px
+
+    .container-content
+        width: 75%
+        display: flex
+        flex-direction: column
+        @include mixins.tablet 
+            width: 90%
+        @include mixins.mobile 
+            width: 100%
+
+        .arch
+            @include mixins.mobile 
+                flex-direction: column-reverse
+        .planets
+            @include mixins.mobile 
+                flex-direction: column-reverse
+        div
+            display: flex 
+            flex-direction: row
+            height: 400px
+            margin-bottom: 60px
+            @include mixins.tablet 
+                height: 550px
+            @include mixins.mobile
+                flex-direction: column
+                height: 1000px 
+                width: 100%  
+                justify-content: center
+
+            .imgphotosnap
+                background-image: url('./../../images/portfolio/desktop/CapaPhotosnap.png')
+                width: 50%
+                background-size: cover
+                @include mixins.mobile 
+                    width: 90%
+                    margin-left: 20px
+                
+            .imgarch
+                background-image: url('./../../images/portfolio/desktop/CapaArch.png')
+                width: 50%
+                background-size: cover
+                @include mixins.mobile 
+                    width: 90%
+                    margin-left: 20px
+
+            .imgdesigno
+                background-image: url('./../../images/portfolio/desktop/CapaDesigno.png')
+                width: 50%
+                background-size: cover
+                @include mixins.mobile 
+                    width: 90%
+                    margin-left: 20px
+            .imgplanets
+                background-image: url('./../../images/portfolio/desktop/CapaPlanets.png')
+                width: 50%
+                background-size: cover
+                @include mixins.mobile 
+                    width: 90%
+                    margin-left: 20px
+            .imgmyteam
+                background-image: url('./../../images/portfolio/desktop/Capamyteam.png')
+                width: 50%
+                background-size: cover
+                @include mixins.mobile 
+                    width: 90%
+                    margin-left: 20px
+
+            .container-text
+                width: 50%
+                display: flex 
+                flex-direction: column
+                padding: 50px
+                border-top: 2px solid variables.$lighGrey
+                border-bottom: 2px solid variables.$lighGrey
+                @include mixins.mobile 
+                    width: 100%
+                    justify-content: center
+
+                h2
+                    margin-bottom: 30px
+                    font-display: variables.$font-Ibarra
+                    font-size: 40px
+                
+                p
+                    line-height: 35px
+                    margin-bottom: 20px
+                    font-family: variables.$font-Public-Sans
+                    
+                button
+                    width: 250px
+                    height: 50px
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    background-color: variables.$veryLightGray
+                    border: 1px solid black
+                

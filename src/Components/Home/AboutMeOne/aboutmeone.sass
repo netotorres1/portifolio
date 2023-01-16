@@ -1,0 +1,54 @@
+@use './../../../styles/variables'
+@use './../../../styles/mixins'
+
+.aboutmeone
+    width: 100vw
+    height: 500px
+    display: flex
+    justify-content: center
+    font-family: variables.$font-Ibarra
+    background-color: variables.$veryLightGray
+    @include mixins.tablet
+        width: 768px
+    @include mixins.mobile 
+        width: 380px
+
+    .container-content
+        width: 75%
+        background-image: url('./../../../images/homepage/desktop/image-homepage-hero.jpg')
+        background-size: cover 
+        @include mixins.tablet
+            width: 90%
+        @include mixins.mobile
+            width: 90% 
+            background-image: url('./../../../images/homepage/mobile/image-homepage-hero.jpg')
+
+        .container-text
+            background-color: variables.$veryLightGray
+            position: relative
+            width: 400px
+            height: 300px
+            top: 200px
+            padding: 50px
+            padding-left: 0px
+            @include mixins.mobile
+                margin-top: 100px
+                width: 100% 
+
+            h2
+                font-size: 35px
+                padding-bottom: 20px    
+
+            button 
+                width: 250px
+                height: 50px
+                background-color: variables.$darkBlue
+                color: variables.$veryLightGray
+                font-family: variables.$font-Public-Sans
+                text-transform: uppercase
+                letter-spacing: 2px
+                border: none 
+
+            img 
+                padding-right: 30px
+                

@@ -1,0 +1,71 @@
+@use './../../../styles/variables'
+@use './../../../styles/mixins'
+
+.footer
+    width: 100vw
+    display: flex
+    justify-content: center
+    background: variables.$grayishDarkBlue
+    @include mixins.tablet 
+        width: 768px
+    @include mixins.mobile
+        width: 380px
+
+    .container-content
+        width: 75%  
+        height: 100px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include mixins.tablet 
+            width: 90%
+        @include mixins.mobile
+            height: 350px
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 100%
+            margin-top: 50px
+    
+    .footer-nav
+        width: 70%
+        display: flex
+        align-items: center
+        @include mixins.mobile
+            height: 500px
+            flex-direction: column
+
+        img
+            height: 50px
+            width: 80px
+            margin: 10px
+            @include mixins.tablet 
+                margin: 0px
+        
+        button
+            padding: 15px
+            margin: 10px
+            color: variables.$veryLightGray
+            text-transform: uppercase
+            background-color: transparent
+            border: none
+            letter-spacing: 2px
+
+            &:hover
+                cursor: pointer
+                text-decoration: underline
+
+    .footer-media
+        width: 30%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex-direction: row
+        @include mixins.mobile 
+            justify-content: center
+            margin-bottom: 30px
+
+        img 
+            height: 30px
+            width: 30px
+            margin: 10px

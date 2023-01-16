@@ -1,0 +1,73 @@
+@use './../../../styles/variables'
+@use './../../../styles/mixins'
+    
+.container-about
+    display: flex
+    width: 100vw
+    height: 500px
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    font-family: variables.$font-Public-Sans
+    margin-top: 200px
+    @include mixins.tablet 
+        width: 768px
+    @include mixins.tablet 
+        width: 380px
+
+    .container-content
+        width: 75%
+        display: flex
+        flex-direction: row
+        @include mixins.tablet 
+            width: 90%
+            height: 600px
+        @include mixins.mobile
+            width: 90%
+            flex-direction: column
+
+        .img
+            background-image: url('./../../../images/homepage/desktop/image-homepage-profile.jpg')
+            width: 50%
+            background-size: conver
+            @include mixins.mobile
+                width: 90%
+                position: relative
+                left: 100px
+
+        .container-text
+            width: 100%
+            @include mixins.mobile 
+                width: 100%
+
+            div
+                border-top: 2px solid variables.$lighGrey
+                padding: 100px
+                display: flex
+                justify-content: center
+                flex-direction: column
+                border-bottom: 2px solid variables.$lighGrey
+                @include mixins.tablet 
+                    padding: 30px
+                h2
+                    font-size: 40px
+                    padding-bottom: 30px
+                    font-family: variables.$font-Ibarra
+
+                p
+                    line-height: 30px
+                    margin-bottom: 28px
+
+                button
+                    width: 250px
+                    height: 50px
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    background-color: variables.$veryLightGray
+                    border: 1px solid black
+                    font-weight: 500
+
+                    &:hover
+                        cursor: pointer
+                        color: variables.$slighlyDesaturatedCyan
+                        border: 1px solid variables.$slighlyDesaturatedCyan

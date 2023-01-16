@@ -1,0 +1,11 @@
+@use './variables'
+@use './main'
+
+@mixin tablet
+    @media(max-width: 768px)
+        @content
+
+    
+@mixin mobile
+    @media(max-width: 380px)
+        @content
