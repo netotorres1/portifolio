@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header className='navbar'>
       <div className='container-navbar'>
-        <img className='logo' src={logo} />
+        <img alt='Logo' className='logo' src={logo} />
         <nav className={openMenu === false ? 'nav' : 'open'}>
           <Link to={'/'}> <button className='nav-button'>Pagina Inicial</button></Link>
           <Link to={'/portifolio'}><button className='nav-button'>Portifólio</button></Link>

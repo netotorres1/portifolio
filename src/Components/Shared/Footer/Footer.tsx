@@ -4,7 +4,6 @@ import './footer.sass'
 
 const logo = require('./../../../images/logo-white.svg').default;
 const github = require('./../../../images/icons/github.svg').default;
-const twitter = require('./../../../images/icons/twitter.svg').default;
 const linkedin = require('./../../../images/icons/linkedin.svg').default;
 
 type Props = {}
@@ -14,7 +13,7 @@ const Footer = (props: Props) => {
     <footer className='footer'>
         <div className='container-content'>
             <div className='footer-nav'>
-                <img src={logo} />
+                <img alt='logo' src={logo} />
                 <button>Pagina Inicial</button>
                 <button>Portifolio</button>
                 <button>Entrar em contato</button>
